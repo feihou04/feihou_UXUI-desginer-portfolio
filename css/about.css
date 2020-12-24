@@ -1,0 +1,600 @@
+body {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1.15em;
+    
+}
+/*hamburger menu with side menu css below*/
+
+.visible {
+    display: block !important;
+}
+
+nav.flexheader {
+    position: relative;
+    /*position: fixed;*/
+ 
+    background-color: #19292d;
+    box-sizing: border-box;
+       width: 100vw;
+       /* height: 70px;
+       width: 100%; */
+       height: 100px;
+     
+       display: flex; 
+       justify-content: space-between;align-items: center;
+       
+       padding: 60px;
+   
+  }
+  
+   
+ #logo {
+    padding-right: 20px;
+    padding-top: 10px;
+  }
+
+  .logo img:hover {
+      transform: rotateY(360deg);
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
+      cursor: pointer;
+  }
+
+  .logo p {
+    float: right;
+    color:#dfebed;
+  }
+
+
+.menuoverlay {
+    z-index: 1337;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+   
+    background: #dfebed;
+    background-image: url(../images/star.gif);
+    top: 0;
+    left: 0;
+ 
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.position {  
+   margin-left: 40%;
+
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+ 
+   /* font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;*/
+    /*padding: 50px 50px 50px 250px ;*/
+}
+ 
+
+
+.hamburger-menu, .hamburger-menu:after, .hamburger-menu:before {
+    width: 33px;
+    height: 4px;
+    border-radius: 2px;
+
+}
+.hamburger-wrapper {
+    display: block;
+    padding: 12px 35px;
+    z-index: 1338;
+
+}
+.hamburger-menu {
+    position: relative;
+    background: #dfebed;
+    transition: all 0ms 200ms;
+    display: block;
+}
+.hamburger-menu.animate {
+    background: #dfebed;
+    position: relative;
+}
+.hamburger-menu:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    background: #dfebed;
+    transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger-menu:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background:#dfebed;
+    transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger-menu.animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+    background: #19292d;
+}
+.hamburger-menu.animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+    background: #19292d;
+}
+
+
+.portfoliolist {
+ 
+    list-style: none;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 15px 10px 125px;
+    display: none;
+    /*background: #dfebed;*/
+    color: #000;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.title {
+ height: 100px;
+ cursor: pointer;
+ 
+
+}
+.title a h2 {
+    color: #19292d;
+}
+.title :hover {
+    text-decoration: underline;
+    text-decoration-color: #ffad6f;
+    transform: translateX(25px);
+    translate: all 0.25s;
+}
+.second i {
+  
+
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+     padding-left: 70px;
+     font-size: 24px;
+    
+}
+.title h2 { 
+
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  padding-left: 25px;
+
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 5px;
+
+}
+.first, .second, .third, .fourth {
+    font-size: 20px;
+    font-weight: 500;
+    vertical-align: middle;
+    padding-left: 15px;
+ 
+   
+}
+.title h2:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+
+}
+ .portfoliolist1, .portfoliolist2, .portfoliolist3, .portfoliolist5 {
+    padding-bottom: 12px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #19292d;
+}
+.portfoliolist4 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #19292d;
+}
+.portfoliolist li a {
+    text-decoration: none;
+    color: #19292d;
+}
+.portfoliolist li a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffad6f;
+    transform: translateX(25px);
+    translate: all 0.25s;
+}
+.gridcontainer1 {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    grid-template-areas:
+   "heroimg herowordbackground";
+    background-color: #19292d;
+    width: 100%;
+    padding-right: 12%;
+    padding-left: 12%;
+    padding-bottom: 2%;
+
+}
+.heroimg {
+    grid-area: heroimg;
+    justify-self: end;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+
+}
+.heroimg img {
+        border: 1px solid #dfebed;
+}
+
+.herowordbackground {
+    grid-area: herowordbackground;
+    color: #dfebed;
+    width: 70%;
+    height: 239px;
+    line-height: 239px;
+    background-color:#dfebed;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+ 
+}
+.mystorytitle, .mystorytitle1 {
+    color: #ffad6f;
+    font-weight: 800;
+}
+
+.heroword {
+    display: inline-block;
+    font-size: 30px;
+    vertical-align: middle;
+    text-align: center;
+    color: #19292d;
+    line-height: normal;
+    padding-right: 15px;
+    padding-left: 15px;
+      
+}
+.mystory {
+ margin-right: 8%;
+ margin-left: 8%;
+}
+.mystory p {
+    text-align: justify;
+}
+
+.mystory h2 {
+    display: inline-block;
+    padding-right: 15px;
+}
+.imgbox {
+  
+      display: inline-block;
+       border: 1px solid white;
+      vertical-align: top;
+  
+}
+.imgbox a :hover {
+    display: inline-block;
+    border: 2px solid #ffad6f;
+    border-radius: 50%;
+}
+.gridcontainer2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title title title"
+    "tool design other";
+    background-image: url(../images/skillimg41.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-color: #dfebed;
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    grid-column-gap: 10%;
+    margin-bottom: 2%;
+
+}
+.skill ul {
+    list-style: none;
+}
+.center {
+    grid-area: title;
+    text-align: center;
+}
+.tool {
+    grid-area: tool;
+}
+.design {
+    grid-area: design;
+}
+
+.other {
+    grid-area: other;
+}
+.toolitem, .designitem, .otheritem {
+    padding: 0px;
+}
+
+.gridcontainer3 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: " title1 title2"
+    "education designation";
+    background-color: #dfebed;
+    background-image: url(../images/educationimage\ 42.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 2%;
+    grid-column-gap: 15%;
+
+}
+.education1 {
+    grid-area: education;
+}
+
+.designation {
+    grid-area: designation;
+}
+
+
+ .flexfooter {
+    background-color: #19292d;
+    padding: 20px 50px;
+    color: #dfebed;
+    display: flex;
+  
+    justify-content: space-between;
+  }
+  .socialmedia {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .socialmedia1, .socialmedia2 {
+      cursor: pointer;
+      flex: auto;
+      padding-right: 1em;
+      transition: color 1s ease;
+  }
+
+  
+  .socialmedia1 :hover, .socialmedia2 :hover {
+      color: dodgerblue
+  }
+
+  #more, #more1 {display: none;}
+
+  #myBtn {
+    position: relative;
+    padding: 10px 30px;
+
+    margin: 50px 50px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    text-emphasis: nowrap;
+    color:#19292d;
+    background-color: #dfebed;
+    letter-spacing: 0.5px;
+    /*text-transform: uppercase;*/
+    transition: 0.5s;
+    overflow: hidden;
+    border-radius: 8px;
+    font-size: 20px;
+    z-index: 1;
+    margin-bottom: 25px;
+    margin-top: -5px;
+   
+ }
+
+ #myBtn:hover {
+    color: #dfebed;
+ 
+    
+
+}
+
+#myBtn #effect {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    background:#19292d;
+    transition: width 0.5s, height 0.5s;
+    z-index: -1;
+   
+
+}
+#myBtn:hover #effect {
+    width: 350px;
+    height: 350px;
+
+  
+}
+
+  @media all and (max-width: 600px) {
+    .flexheader {
+     
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        
+    }
+    #logo {
+        margin-bottom: 10px;
+    }
+
+     .logo p {
+         display: none;
+     }
+     .hamburger-menu, .hamburger-menu:after, .hamburger-menu:before {
+        width: 28px;
+        height: 3px;
+        border-radius: 2px;
+     
+    }
+    .hamburger-wrapper {
+    
+        padding: 0px;
+        
+       
+    }
+     .position {
+        margin-left: 15%;
+        margin-top: 10%;
+         
+     }
+     .position .span, .position h2, .position i {
+         font-size: 26px;
+     }
+     .position i {
+        font-size: 14px;
+        padding-left: 30px;
+    }
+
+     .portfoliolist li {
+        font-size: 18px;
+        
+    }
+    .position ul {
+        padding-left: 100px;
+        padding-top: 0px;
+    }   
+
+     .gridcontainer1 {
+         display: grid;
+         grid-template-columns: auto;
+         grid-template-rows: auto auto;
+         grid-template-areas: "heroimg"
+         "herowordbackground";
+         align-self: center;
+         justify-content: center;
+    
+         padding-left: 0;
+         padding-right:  0;
+          padding-bottom: 10px;
+          width:100vw;
+          
+         
+
+     }
+     .heroimg {
+         grid-area: heroimg;
+         justify-self: center;
+        align-self: center;
+    
+     
+          padding-bottom: 0px;
+        
+     }
+     .herowordbackground {
+         grid-area: herowordbackground;
+         height: auto;
+         width: 80%;
+    
+        
+         justify-self: center;
+         align-self: center;
+     }
+     .heroword {
+           font-size: 26px;
+           padding-right: 15px;
+           padding-left: 15px;
+           
+     }
+     .gridcontainer2 {
+         display: grid;
+         grid-template-columns: auto auto;
+         grid-template-rows: auto auto auto;
+         grid-template-areas: "title title"
+         "tool design"
+   
+         "other other";
+         justify-content: center;
+         padding-right: 8%;
+         padding-left: 8%;
+         grid-column-gap: 15%;
+        
+     }
+     .mystorytitle {
+         font-size: 30px;
+     }
+     .mystory p {
+         font-size: 24px;
+     }
+     .mystorytitle1 {
+         font-size: 30px;
+     }
+     .skill h2 {
+         justify-self: center;
+         width: auto;
+         font-size: 30px;
+       
+     }
+     .gridcontainer3 {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "education"
+        "designation";
+        justify-content: center;
+        padding-right: 8%;
+        padding-left: 8%;
+
+      
+    }
+    .title1, .title2 {
+        font-size: 28px;
+    }
+    .educationitem, .designationitem, .toolitem, .designitem, .otheritem {
+        font-size: 20px;
+    }
+    .skill h3 {
+        font-size: 24px;
+    }
+
+    
+
+     .flexfooter {
+       flex-direction: column;
+     }
+     .socialmedia {
+       flex-direction: column;
+     
+       padding-left: -20px;
+       align-items: start;
+           
+     }
+     .socialmedia1, .socialmedia2 span {
+       padding-bottom: 20px;
+       font-size: 0.8em;
+    
+     }
+     .flexfooter p {
+         font-size: 1em;
+     }
+
+
